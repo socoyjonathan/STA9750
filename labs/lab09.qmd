@@ -213,7 +213,7 @@ dir_info() |> slice_max(size) |> pull(path) |> path_abs()
 ```{webr}
 library(fs)
 library(dplyr)
-dir_info("data", recurse=TRUE) |> slice_max(size) |> pull(path) |> path_abs()
+dir_info("data", recurse=TRUE) |> slice_min(size) |> pull(path) |> path_abs()
 ```   
 
 :::
